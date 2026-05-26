@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html class="dark" lang="cs">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>O nás &amp; Kontakt | ELEVATEWEB STUDIO</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<style>
+  body { background-color: #131314; color: #e5e2e3; overflow-x: hidden; }
+  .glass-panel { background: rgba(25,25,26,0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+  .glass-panel:hover { background-image: none; }
+  .neural-bg { background-image: radial-gradient(circle at 50% 50%, rgba(0,245,255,0.05) 0%, transparent 70%); }
+  .tech-bracket { position: relative; }
+  .tech-bracket::before { content:''; position:absolute; top:0; left:0; width:10px; height:10px; border-top:2px solid #00f5ff; border-left:2px solid #00f5ff; }
+  .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24; }
+</style>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface": "#131314", "surface-dim": "#131314", "surface-bright": "#3a393a",
+          "surface-container-lowest": "#0e0e0f", "surface-container-low": "#1c1b1c",
+          "surface-container": "#201f20", "surface-container-high": "#2a2a2b",
+          "surface-container-highest": "#353436", "surface-variant": "#353436",
+          "on-surface": "#e5e2e3", "on-surface-variant": "#b9caca",
+          "inverse-surface": "#e5e2e3", "inverse-on-surface": "#313031",
+          "outline": "#849495", "outline-variant": "#3a494a", "surface-tint": "#00dce5",
+          "primary": "#e9feff", "on-primary": "#003739",
+          "primary-container": "#00f5ff", "on-primary-container": "#006c71",
+          "inverse-primary": "#00696e", "primary-fixed": "#63f7ff", "primary-fixed-dim": "#00dce5",
+          "on-primary-fixed": "#002021", "on-primary-fixed-variant": "#004f53",
+          "secondary": "#b3c5ff", "on-secondary": "#002b75",
+          "secondary-container": "#0266ff", "on-secondary-container": "#f9f7ff",
+          "secondary-fixed": "#dae1ff", "secondary-fixed-dim": "#b3c5ff",
+          "on-secondary-fixed": "#001849", "on-secondary-fixed-variant": "#003fa4",
+          "tertiary": "#fafaf9", "on-tertiary": "#2f3131",
+          "tertiary-container": "#dedddd", "on-tertiary-container": "#606161",
+          "tertiary-fixed": "#e3e2e2", "tertiary-fixed-dim": "#c7c6c6",
+          "on-tertiary-fixed": "#1a1c1c", "on-tertiary-fixed-variant": "#464747",
+          "error": "#ffb4ab", "on-error": "#690005",
+          "error-container": "#93000a", "on-error-container": "#ffdad6",
+          "background": "#131314", "on-background": "#e5e2e3"
+        },
+        borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+        spacing: { "container-max": "1440px", "gutter": "24px", "margin-desktop": "64px", "margin-mobile": "20px", "base": "8px" },
+        fontFamily: { "label-md": ["JetBrains Mono"], "headline-md": ["Sora"], "headline-sm": ["Sora"], "headline-lg-mobile": ["Sora"], "headline-lg": ["Sora"], "body-lg": ["Inter"], "body-md": ["Inter"], "label-sm": ["JetBrains Mono"] },
+        fontSize: {
+          "label-md": ["14px", {"lineHeight":"1.4","fontWeight":"500"}],
+          "headline-md": ["32px", {"lineHeight":"1.2","fontWeight":"600"}],
+          "headline-sm": ["24px", {"lineHeight":"1.3","fontWeight":"600"}],
+          "headline-lg-mobile": ["32px", {"lineHeight":"1.2","letterSpacing":"-0.02em","fontWeight":"700"}],
+          "headline-lg": ["48px", {"lineHeight":"1.1","letterSpacing":"-0.02em","fontWeight":"700"}],
+          "body-lg": ["18px", {"lineHeight":"1.6","fontWeight":"400"}],
+          "body-md": ["16px", {"lineHeight":"1.6","fontWeight":"400"}],
+          "label-sm": ["12px", {"lineHeight":"1.4","fontWeight":"400"}]
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/15 shadow-[0_0_15px_rgba(0,245,255,0.1)]">
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+    <a href="index.html" class="font-headline-sm text-headline-sm font-bold tracking-tighter text-primary-fixed-dim">ELEVATEWEB STUDIO</a>
+    <div class="hidden md:flex gap-8 items-center">
+      <a href="services.html" class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors">Services</a>
+      <a href="monetization.html" class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors">Monetization</a>
+      <a href="contact.html" class="font-label-md text-label-md uppercase tracking-wider text-primary border-b-2 border-primary-fixed pb-1">About</a>
+      <a href="#contact" class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label-md text-label-md uppercase tracking-wider hover:brightness-125 transition-all duration-300 active:scale-95">
+        Request Consultation
+      </a>
+    </div>
+    <button class="md:hidden text-primary" id="menu-toggle">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-surface/95 backdrop-blur-xl border-t border-outline-variant/15 px-margin-mobile py-4 flex flex-col gap-4">
+    <a href="services.html" class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors py-2">Services</a>
+    <a href="monetization.html" class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors py-2">Monetization</a>
+    <a href="contact.html" class="font-label-md text-label-md uppercase tracking-wider text-primary py-2">About</a>
+    <a href="#contact" class="bg-primary-container text-on-primary-container font-label-md px-6 py-3 rounded-lg text-center">Request Consultation</a>
+  </div>
+</nav>
+
+<main class="pt-24 min-h-screen">
+
+  <!-- Hero -->
+  <section class="relative h-72 md:h-96 flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img alt="Panama City digital blueprint map" class="w-full h-full object-cover" style="filter:grayscale(1) invert(1) brightness(0.5) contrast(1.2)" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1L9_Q76UaNORmp9EYG1tetmXZuuF9Yj5FXPnujeEIBTuMvWBxChu-fONhZ6fvJ8hGKRn8l3dkekw7OoRADktEgN4cjdFRIRvLGmyZ-dulFjlxJ5ZC1oJvxD6IofAxE_sPW2eA7lmPykWnj3e8nbE3eUjVj_WzdN0Axn8W3piBOIMf1IQ9zF4j5RZoeCpytsWIy8Vzjwpi3mfp1lOwR9SpL_oWY7S-_gMpNtuotNOF11NCIZkiamVG-U8jNH5jT2G0tl8EBlsktYJw">
+      <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-surface/40"></div>
+    </div>
+    <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-4xl">
+      <div class="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-primary-container/10 border border-primary-container/20 rounded-full">
+        <span class="flex h-2 w-2 rounded-full bg-primary-container animate-pulse"></span>
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed">Globální Strategické Centrum</span>
+      </div>
+      <h1 class="font-headline-lg text-headline-lg mb-6 leading-tight">
+        Architektura <span class="text-primary-fixed">AI budoucnosti</span><br>v srdci Ameriky.
+      </h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+        ELEVATEWEB STUDIO spojuje unikátní logistickou pozici Panamy s nejmodernějším výzkumem umělé inteligence pro globální transformaci podnikání.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Bento Grid -->
+  <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+
+      <!-- Mission Card -->
+      <div class="md:col-span-7 glass-panel p-10 relative overflow-hidden group tech-bracket">
+        <span class="font-label-md text-label-md text-primary-fixed mb-4 block">NAŠE MISE</span>
+        <h2 class="font-headline-md text-headline-md mb-6">Demokratizace AI prostřednictvím <span class="text-primary-fixed">digitální logistiky</span>.</h2>
+        <p class="text-on-surface-variant font-body-md mb-8">
+          Věříme, že Panama je více než jen kanál. Je to datový uzel světa. Naše strategie využívá nízkou latenci a strategické podmořské kabely k hostování AI modelů, které pohánějí rozhodování v reálném čase pro Fortune 500 společnosti.
+        </p>
+        <div class="flex gap-4">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-primary-fixed">45ms</div>
+            <div class="text-[10px] uppercase font-label-sm text-on-surface-variant">Průměrná Latence</div>
+          </div>
+          <div class="w-px h-10 bg-outline-variant/30"></div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-primary-fixed">99.9%</div>
+            <div class="text-[10px] uppercase font-label-sm text-on-surface-variant">Dostupnost Hubu</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Global Network Card -->
+      <div class="md:col-span-5 glass-panel p-10 flex flex-col justify-between border-primary-container/20">
+        <div>
+          <span class="material-symbols-outlined text-primary-fixed text-4xl mb-6 block" style="font-variation-settings:'FILL' 1">public</span>
+          <h3 class="font-headline-sm text-headline-sm mb-4">Globální Expertíza</h3>
+          <p class="text-on-surface-variant font-body-md">
+            Náš tým tvoří experti ze 12 zemí, od Silicon Valley po Singapur, operující z našeho centrálního hubu v Panama City.
+          </p>
+        </div>
+        <div class="mt-8 flex -space-x-4">
+          <img alt="AI engineer" class="w-12 h-12 rounded-full border-2 border-surface object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3rnywAqD3YsInZcR6g5IuliEX0o5vPc3plrDP9OiEIGb_TlN28HebqbCe1vVp1_N-x7UqQAVxw8I95IBqm5kMRHCZL3oZ1fOmttPAvbfM2gX_ogo3bHrS7GjSBg0V0LdABM9r_sdj90mKjLSQI7NZK5y0jpYbfI0vjCzFqFtZZel_c-UIu32GWCn3sDeRm5CwwAh5x6Dyt7vxIYkoelog36de8rOG4H35SDiYMLAZjiqCL-ZZB-R7pYrnzhUmEvq_PjSoazAhS_15">
+          <img alt="Data scientist" class="w-12 h-12 rounded-full border-2 border-surface object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnXje9kndrWc3sXcwnYxcTwYlV_mP7yf9kJ2GQ-NCQIyTkA9Gcd9dwsZSEruRcSXD1Oz7vBrWnkSXa8yGkTC6RIfFuftp1zUg8WeQPUpNST3wvgNCHuULbOOGT9O6-Y34gtE-iUWjbFE3aFUZpTFWb_eOZPCRS4Cbwyd5sVehMZhFxnhAO2kwl4KAyaAz_MsFyWy530YiP5SH-M8WUKavxUaQH55m8vQDc3vyYJK0ak_r-qCenYYBcW0GrB5DFaKBCHIKeADNjDSZI">
+          <img alt="Senior executive" class="w-12 h-12 rounded-full border-2 border-surface object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXNPWtAaP0omkESsLygA1mFQohJ4-CEHxxpYsQwn90acJ8dIWzmTS0LomYLzyPnc8GAu3VqJebJ9bgS1ALvsJc20B8gKzsw8Ny7sG9NjimD-oHSx5shK_V1HL2nJXrW6ClD8tF8PmgMmTgkKCxjy4EClSKHi0s3kkDqYr5UwH9xQCN2Ea26KUIMqPv9BYuXb2JSW4-2ub_4cedJYF6yxNExN_YBYBqQrVHxlTMOERkM56vHYCAsA5q9EEnJHBzOcUmwN1H33rQnhr9">
+          <div class="w-12 h-12 rounded-full border-2 border-surface bg-surface-container-high flex items-center justify-center font-label-sm text-primary-fixed">+25</div>
+        </div>
+      </div>
+
+      <!-- Technical Specs Table -->
+      <div class="md:col-span-12 glass-panel p-0 overflow-hidden">
+        <div class="p-6 border-b border-outline-variant/15 flex justify-between items-center bg-surface-container-low/50">
+          <span class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">HUB SPECIFIKACE</span>
+          <span class="font-label-sm text-label-sm text-primary-fixed/60">LIVE_STATUS: OPTIMAL</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left font-label-md">
+            <thead>
+              <tr class="text-on-surface-variant uppercase text-[10px] border-b border-outline-variant/10">
+                <th class="px-6 md:px-10 py-4 font-medium">Sektor</th>
+                <th class="px-6 md:px-10 py-4 font-medium">Technologie</th>
+                <th class="px-6 md:px-10 py-4 font-medium hidden md:table-cell">Kapacita</th>
+                <th class="px-6 md:px-10 py-4 font-medium text-right">Priorita</th>
+              </tr>
+            </thead>
+            <tbody class="text-sm">
+              <tr class="border-b border-outline-variant/5 hover:bg-primary-container/5 transition-colors">
+                <td class="px-6 md:px-10 py-5">Logistická Optimalizace</td>
+                <td class="px-6 md:px-10 py-5">Neural Route Mapping</td>
+                <td class="px-6 md:px-10 py-5 hidden md:table-cell">2.4 PB/day</td>
+                <td class="px-6 md:px-10 py-5 text-right font-bold text-primary-fixed">ULTRA</td>
+              </tr>
+              <tr class="border-b border-outline-variant/5 hover:bg-primary-container/5 transition-colors">
+                <td class="px-6 md:px-10 py-5">Fintech AI</td>
+                <td class="px-6 md:px-10 py-5">Quantum-Safe Encryption</td>
+                <td class="px-6 md:px-10 py-5 hidden md:table-cell">850 TPS</td>
+                <td class="px-6 md:px-10 py-5 text-right font-bold text-primary-fixed">HIGH</td>
+              </tr>
+              <tr class="hover:bg-primary-container/5 transition-colors">
+                <td class="px-6 md:px-10 py-5">Edge Computing</td>
+                <td class="px-6 md:px-10 py-5">Distributed Mesh Nodes</td>
+                <td class="px-6 md:px-10 py-5 hidden md:table-cell">14 Locations</td>
+                <td class="px-6 md:px-10 py-5 text-right font-bold text-primary-fixed">GLOBAL</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-24 bg-surface-container-lowest/50 relative overflow-hidden" id="contact">
+    <div class="neural-bg absolute inset-0 z-0"></div>
+    <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+
+        <!-- Contact Info -->
+        <div>
+          <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8">Zahajte svou <span class="text-primary-fixed">AI Transformaci</span> dnes.</h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+            Ať už hledáte optimalizaci dodavatelského řetězce nebo nasazení LLM ve vašem regionu, náš tým v Panama City je připraven.
+          </p>
+          <div class="space-y-8">
+            <div class="flex items-start gap-6">
+              <div class="w-12 h-12 flex-shrink-0 bg-surface-container border border-outline-variant/30 flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary-fixed">location_on</span>
+              </div>
+              <div>
+                <h4 class="font-label-md text-label-md text-on-surface">Centrála Panama</h4>
+                <p class="text-on-surface-variant text-sm">Torre Global Bank, 15. patro<br>Calle 50, Panama City</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-6">
+              <div class="w-12 h-12 flex-shrink-0 bg-surface-container border border-outline-variant/30 flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary-fixed">mail</span>
+              </div>
+              <div>
+                <h4 class="font-label-md text-label-md text-on-surface">Emailová Podpora</h4>
+                <p class="text-on-surface-variant text-sm">strategy@elevateweb.studio<br>24/7 Technický dohled</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-6">
+              <div class="w-12 h-12 flex-shrink-0 bg-surface-container border border-outline-variant/30 flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary-fixed">schedule</span>
+              </div>
+              <div>
+                <h4 class="font-label-md text-label-md text-on-surface">Dostupnost</h4>
+                <p class="text-on-surface-variant text-sm">Pondělí – Pátek: 9:00 – 18:00 EST<br>Pohotovost 24/7</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="glass-panel p-8 md:p-12 relative">
+          <div class="absolute -top-4 -right-4 w-24 h-24 bg-primary-container/10 blur-3xl rounded-full"></div>
+          <form class="space-y-6" id="contact-form">
+            <div class="space-y-1">
+              <label class="font-label-sm text-label-sm uppercase text-on-surface-variant ml-1" for="name">Jméno</label>
+              <input id="name" class="w-full bg-transparent border-b border-outline-variant/50 focus:border-primary-fixed focus:ring-0 text-on-surface font-label-md py-2 transition-all outline-none" placeholder="Jan Novák" type="text" required>
+            </div>
+            <div class="space-y-1">
+              <label class="font-label-sm text-label-sm uppercase text-on-surface-variant ml-1" for="email">Firemní Email</label>
+              <input id="email" class="w-full bg-transparent border-b border-outline-variant/50 focus:border-primary-fixed focus:ring-0 text-on-surface font-label-md py-2 transition-all outline-none" placeholder="jan@spolecnost.cz" type="email" required>
+            </div>
+            <div class="space-y-1">
+              <label class="font-label-sm text-label-sm uppercase text-on-surface-variant ml-1" for="project">Typ projektu</label>
+              <select id="project" class="w-full bg-surface border-b border-outline-variant/50 focus:border-primary-fixed focus:ring-0 text-on-surface font-label-md py-2 transition-all outline-none appearance-none cursor-pointer">
+                <option value="ai-strategy">AI Strategie</option>
+                <option value="logistics">Logistická optimalizace</option>
+                <option value="fintech">Finanční modelování</option>
+                <option value="crm">CRM Integrace</option>
+                <option value="mobile">Mobilní AI</option>
+              </select>
+            </div>
+            <div class="space-y-1 pt-4">
+              <label class="font-label-sm text-label-sm uppercase text-on-surface-variant ml-1" for="message">Vaše Zpráva</label>
+              <textarea id="message" class="w-full bg-transparent border border-outline-variant/30 rounded-lg focus:border-primary-fixed focus:ring-0 text-on-surface font-body-md p-4 transition-all outline-none" placeholder="Jak vám můžeme pomoci?" rows="4"></textarea>
+            </div>
+            <button class="w-full bg-primary-container text-on-primary-container font-label-md uppercase tracking-widest py-4 hover:shadow-[0_0_25px_rgba(0,245,255,0.4)] transition-all flex items-center justify-center gap-2" type="submit">
+              Odeslat Poptávku <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="w-full py-16 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-t border-outline-variant/10">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
+    <div>
+      <a href="index.html" class="font-headline-sm text-headline-sm text-primary block mb-6">ELEVATEWEB STUDIO</a>
+      <p class="font-body-md text-body-md text-on-surface-variant">Architektura příští generace inteligence.</p>
+    </div>
+    <div class="space-y-4">
+      <h5 class="font-label-md text-label-md uppercase text-primary-fixed">Navigace</h5>
+      <nav class="flex flex-col gap-2">
+        <a class="text-on-tertiary-fixed-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="index.html">Domů</a>
+        <a class="text-on-tertiary-fixed-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="services.html">Služby</a>
+        <a class="text-on-tertiary-fixed-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="monetization.html">Monetizace</a>
+      </nav>
+    </div>
+    <div class="space-y-4">
+      <h5 class="font-label-md text-label-md uppercase text-primary-fixed">Newsletter</h5>
+      <div class="flex">
+        <input class="bg-surface-container border border-outline-variant/30 px-4 py-2 text-sm w-full outline-none focus:border-primary-fixed text-on-surface" placeholder="Email" type="email" id="newsletter-email">
+        <button class="bg-primary-container text-on-primary-container px-4 py-2 hover:brightness-110 transition-all" onclick="document.getElementById('newsletter-email').value=''">
+          <span class="material-symbols-outlined">send</span>
+        </button>
+      </div>
+    </div>
+    <div class="space-y-4 flex flex-col justify-between">
+      <div>
+        <h5 class="font-label-md text-label-md uppercase text-primary-fixed mb-4">Právní</h5>
+        <nav class="flex flex-col gap-2">
+          <a class="text-on-tertiary-fixed-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Privacy Policy</a>
+          <a class="text-on-tertiary-fixed-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Terms of Service</a>
+        </nav>
+      </div>
+      <div class="flex gap-4">
+        <div class="w-10 h-10 border border-outline-variant/30 flex items-center justify-center hover:border-primary-fixed cursor-pointer transition-colors">
+          <span class="material-symbols-outlined">share</span>
+        </div>
+        <div class="w-10 h-10 border border-outline-variant/30 flex items-center justify-center hover:border-primary-fixed cursor-pointer transition-colors">
+          <span class="material-symbols-outlined">data_usage</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-container-max mx-auto mt-12 pt-8 border-t border-outline-variant/5">
+    <p class="font-body-md text-body-md text-on-surface-variant text-center">© 2024 ELEVATEWEB STUDIO CORPORATION LTD. DIGITAL LOGISTICS HUB, PANAMA CITY.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+
+  // Floating particle background
+  function createParticles() {
+    const container = document.body;
+    for (let i = 0; i < 5; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'fixed pointer-events-none bg-primary-fixed-dim/20 rounded-full blur-xl';
+      const size = Math.random() * 200 + 100;
+      particle.style.width = size + 'px';
+      particle.style.height = size + 'px';
+      particle.style.top = Math.random() * 100 + 'vh';
+      particle.style.left = Math.random() * 100 + 'vw';
+      particle.style.transition = 'all 20s linear';
+      particle.style.zIndex = '-1';
+      container.appendChild(particle);
+      setInterval(() => {
+        particle.style.top = Math.random() * 100 + 'vh';
+        particle.style.left = Math.random() * 100 + 'vw';
+      }, 2000);
+    }
+  }
+  createParticles();
+
+  document.getElementById('contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    btn.textContent = 'Odesláno ✓';
+    btn.classList.add('bg-green-600');
+    btn.classList.remove('bg-primary-container');
+    setTimeout(() => {
+      btn.innerHTML = 'Odeslat Poptávku <span class="material-symbols-outlined text-lg">arrow_forward</span>';
+      btn.classList.remove('bg-green-600');
+      btn.classList.add('bg-primary-container');
+      e.target.reset();
+    }, 3000);
+  });
+
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('nav');
+    if (window.pageYOffset > 50) {
+      header.classList.add('py-2');
+      header.classList.remove('py-4');
+    } else {
+      header.classList.add('py-4');
+      header.classList.remove('py-2');
+    }
+  });
+
+  document.querySelectorAll('.glass-panel').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.backgroundImage = `radial-gradient(circle 200px at ${x}px ${y}px, rgba(0,245,255,0.05), transparent), rgba(25,25,26,0.6)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.backgroundImage = '';
+    });
+  });
+</script>
+</body>
+</html>
