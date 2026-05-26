@@ -58,11 +58,11 @@ if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const btn = e.target.querySelector('button[type="submit"]');
-    btn.textContent = 'Odesláno ✓';
+    btn.textContent = 'Submitted ✓';
     btn.classList.add('bg-green-600');
     btn.classList.remove('bg-primary-container');
     setTimeout(() => {
-      btn.innerHTML = 'Odeslat Poptávku <span class="material-symbols-outlined text-lg">arrow_forward</span>';
+      btn.innerHTML = 'Submit Request <span class="material-symbols-outlined text-lg">arrow_forward</span>';
       btn.classList.remove('bg-green-600');
       btn.classList.add('bg-primary-container');
       e.target.reset();
