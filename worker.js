@@ -1,7 +1,7 @@
-import { apiContactForm } from "./api/contact.js";
+import { apiContactForm } from "./api/contact-form.js";
 
 const API_ROUTES = {
-  "/api/contact": apiContactForm,
+  "/api/contact-form": apiContactForm,
 };
 
 export default {

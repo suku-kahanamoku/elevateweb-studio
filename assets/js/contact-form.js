@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const endpoint =
       window.location.protocol === "file:"
-        ? "http://127.0.0.1:3000/api/contact"
-        : "/api/contact";
+        ? "http://127.0.0.1:3000/api/contact-form"
+        : "/api/contact-form";
 
     try {
       const response = await fetch(endpoint, {
