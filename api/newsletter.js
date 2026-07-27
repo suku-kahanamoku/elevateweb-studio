@@ -18,7 +18,7 @@ export async function apiNewsletter(request, env, requestUrl) {
     );
   }
 
-  const backendUrl = buildBackendUrl(env, "/api/newsletter");
+  const backendUrl = buildBackendUrl(env, "/api/mailer/newsletter");
 
   if (!backendUrl) {
     return jsonResponse(
