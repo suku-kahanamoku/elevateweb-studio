@@ -4,8 +4,7 @@
   "compatibility_date": "2026-07-27",
   "main": "worker.js",
   "vars": {
-    "BACKEND_URL": "https://www.charter-agency.com",
-    "BACKEND_PATH": "/api/mailer"
+    "BACKEND_URL": "https://www.charter-agency.com"
   },
   "assets": {
     "directory": "./"
