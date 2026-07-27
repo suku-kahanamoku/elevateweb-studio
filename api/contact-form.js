@@ -18,7 +18,7 @@ export async function apiContactForm(request, env, requestUrl) {
     );
   }
 
-  const backendUrl = buildBackendUrl(env);
+  const backendUrl = buildBackendUrl(env, "/api/mailer");
 
   if (!backendUrl) {
     return jsonResponse(

@@ -4,17 +4,14 @@ export const CORS_HEADERS = {
   "Access-Control-Allow-Headers": "Content-Type",
 };
 
-export function buildBackendUrl(env) {
+export function buildBackendUrl(env, path) {
   const backendBaseUrl = env.BACKEND_URL;
-  const backendPath = "/api/mailer";
 
   if (!backendBaseUrl) {
     return null;
   }
 
-  const normalizedPath = backendPath.startsWith("/")
-    ? backendPath.slice(1)
-    : backendPath;
+  const normalizedPath = path.startsWith("/") ? path.slice(1) : path;
 
   return new URL(
     normalizedPath,
