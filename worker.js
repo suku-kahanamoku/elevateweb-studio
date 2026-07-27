@@ -34,7 +34,8 @@ function jsonResponse(body, status) {
 
 export default {
   async fetch(request, env) {
-    const { pathname } = new URL(request.url);
+    const requestUrl = new URL(request.url);
+    const { pathname } = requestUrl;
 
     if (request.method === "OPTIONS" && pathname === "/api/contact") {
       return new Response(null, {
@@ -61,6 +62,9 @@ export default {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            "X-Forwarded-Host": requestUrl.host,
+            "X-Original-Host": requestUrl.host,
+            "X-Forwarded-Proto": requestUrl.protocol.replace(":", ""),
           },
           body: await request.text(),
         });
