@@ -49,7 +49,13 @@ const server = http.createServer(async (req, res) => {
             "Content-Type":
               response.headers.get("content-type") || "application/json",
           });
-          res.end(responseText || JSON.stringify({ success: false, message: "Backend returned an error" }));
+          res.end(
+            responseText ||
+              JSON.stringify({
+                success: false,
+                message: "Backend returned an error",
+              }),
+          );
           return;
         }
 
