@@ -6,7 +6,7 @@ const CORS_HEADERS = {
 
 function buildBackendUrl(env) {
   const backendBaseUrl = env.BACKEND_URL;
-  const backendPath = env.BACKEND_PATH || "/mailer";
+  const backendPath = env.BACKEND_PATH || "/api/mailer";
 
   if (!backendBaseUrl) {
     return null;

@@ -5,7 +5,7 @@
   "main": "worker.js",
   "vars": {
     "BACKEND_URL": "https://www.charter-agency.com",
-    "BACKEND_PATH": "/mailer"
+    "BACKEND_PATH": "/api/mailer"
   },
   "assets": {
     "directory": "./"
