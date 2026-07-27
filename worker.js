@@ -5,13 +5,21 @@ const CORS_HEADERS = {
 };
 
 function buildBackendUrl(env) {
-  const backendBaseUrl = `${env.BACKEND_URL}/mailer`;
+  const backendBaseUrl = env.BACKEND_URL;
+  const backendPath = env.BACKEND_PATH || "/mailer";
 
   if (!backendBaseUrl) {
     return null;
   }
 
-  return backendBaseUrl;
+  const normalizedPath = backendPath.startsWith("/")
+    ? backendPath.slice(1)
+    : backendPath;
+
+  return new URL(
+    normalizedPath,
+    `${backendBaseUrl.replace(/\/+$/, "")}/`,
+  ).toString();
 }
 
 function jsonResponse(body, status) {
