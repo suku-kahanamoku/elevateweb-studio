@@ -63,27 +63,6 @@ document.querySelectorAll(".glass-panel").forEach((card) => {
 });
 
 /**
- * Vytvori efekt odeslani formulare na kontaktnim formulari
- */
-const contactForm = document.getElementById("contact-form");
-if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const btn = e.target.querySelector('button[type="submit"]');
-    btn.textContent = "Submitted ✓";
-    btn.classList.add("bg-green-600");
-    btn.classList.remove("bg-primary-container");
-    setTimeout(() => {
-      btn.innerHTML =
-        'Submit Request <span class="material-symbols-outlined text-lg">arrow_forward</span>';
-      btn.classList.remove("bg-green-600");
-      btn.classList.add("bg-primary-container");
-      e.target.reset();
-    }, 3000);
-  });
-}
-
-/**
  * Efekt zmeny velikosti hlavicky pri scrollovani
  */
 // Contact page: scroll header shrink
