@@ -1,0 +1,11 @@
+node_modules/
+.wrangler/
+.git/
+.vscode/
+.github/
+package-lock.json
+package.json
+postcss.config.js
+tailwind.config.js
+server.js
+assets/css/input.css
