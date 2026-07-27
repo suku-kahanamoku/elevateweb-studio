@@ -1,7 +1,9 @@
 import { apiContactForm } from "./api/contact-form.js";
+import { apiNewsletter } from "./api/newsletter.js";
 
 const API_ROUTES = {
   "/api/contact-form": apiContactForm,
+  "/api/newsletter": apiNewsletter,
 };
 
 export default {

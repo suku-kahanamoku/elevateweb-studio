@@ -606,20 +606,23 @@
           <h2 class="font-label-md text-label-md uppercase text-primary-fixed">
             Newsletter
           </h2>
-          <div class="flex">
-            <input
-              class="bg-surface-container border border-outline-variant/30 px-4 py-2 text-sm w-full outline-none focus:border-primary-fixed text-on-surface"
-              placeholder="Email"
-              type="email"
-              id="newsletter-email"
-            />
-            <button
-              class="bg-primary-container text-on-primary-container px-4 py-2 hover:brightness-110 transition-all"
-              onclick="document.getElementById('newsletter-email').value = ''"
-            >
-              <span class="material-symbols-outlined">send</span>
-            </button>
-          </div>
+          <form id="newsletter-form" class="space-y-2">
+            <div class="flex">
+              <input
+                class="bg-surface-container border border-outline-variant/30 px-4 py-2 text-sm w-full outline-none focus:border-primary-fixed text-on-surface"
+                placeholder="Email"
+                type="email"
+                id="newsletter-email"
+                required
+              />
+              <button
+                type="submit"
+                class="bg-primary-container text-on-primary-container px-4 py-2 hover:brightness-110 transition-all"
+              >
+                <span class="material-symbols-outlined">send</span>
+              </button>
+            </div>
+          </form>
         </div>
         <div class="space-y-4 flex flex-col justify-between">
           <div>
@@ -668,5 +671,6 @@
     </footer>
 
     <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/newsletter.js" defer></script>
   </body>
 </html>
